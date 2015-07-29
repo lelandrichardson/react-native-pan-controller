@@ -1,0 +1,30 @@
+{
+  "name": "react-native-pan-controller",
+  "version": "1.0.0",
+  "description": "A react native component to help with common use cases for scrolling/panning/etc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lelandrichardson/react-native-pan-controller.git"
+  },
+  "keywords": [
+    "react",
+    "react",
+    "native",
+    "react",
+    "component",
+    "panning",
+    "scrolling",
+    "touch",
+    "animation"
+  ],
+  "author": "Leland Richardson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lelandrichardson/react-native-pan-controller/issues"
+  },
+  "homepage": "https://github.com/lelandrichardson/react-native-pan-controller#readme"
+}
