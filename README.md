@@ -23,26 +23,26 @@ $ npm install --save react-native-pan-controller
 
 ### Configuration
 
-| Prop | Required | Default | Type | Description |
-| :------------ |:---:|:---------------:| :---------------:| :-----|
-| panX | NO | `new Animated.Value(0)` | `Animated` | ... |
-| panY | NO | `new Animated.Value(0)` | `Animated` | ... |
-| horizontal | NO | `false` | `Boolean` | ... |
-| vertical | NO | `false` | `Boolean` | ... |
-| lockDirection | NO | `true` | `Boolean` | ... |
-| overshootX | NO | `"spring"` | `"spring"|"clamp"` | ... |
-| overshootY | NO | `"spring"` | `"spring"|"clamp"` | ... |
-| xMode | NO | `"decay"` | `"decay"|"snap"|"spring-origin"` | ... |
-| yMode | NO | `"decay"` | `"decay"|"snap"|"spring-origin"` | ... |
-| xBounds | NO | `[-Infinity, Infinity]` | `Array<Number>` | ... |
-| yBounds | NO | `[-Infinity, Infinity]` | `Array<Number>` | ... |
-| snapSpacingX | NO | `null` | `Number` | ... |
-| snapSpacingY | NO | `null` | `Number` | ... |
-| overshootSpringConfig | NO | `{ friction: 7, tension: 40 }` | `Object` | ... |
-| momentumDecayConfig | NO | `{ deceleration: 0.993 }` | `Object` | ... |
-| overshootSpringConfig | NO | `{ friction: 7, tension: 40 }` | `Object` | ... |
-| directionLockDistance | NO | `10` | `Number` | ... |
-| overshootReductionFactor | NO | `3` | `Number` | ... |
+| Prop | Default | Type | Description |
+| :------------ |:---------------:| :---------------:| :-----|
+| panX | `new Animated.Value(0)` | `Animated` | ... |
+| panY | `new Animated.Value(0)` | `Animated` | ... |
+| horizontal | `false` | `Boolean` | ... |
+| vertical | `false` | `Boolean` | ... |
+| lockDirection | `true` | `Boolean` | ... |
+| overshootX | `"spring"` | `"spring"|"clamp"` | ... |
+| overshootY | `"spring"` | `"spring"|"clamp"` | ... |
+| xMode | `"decay"` | `"decay"|"snap"|"spring-origin"` | ... |
+| yMode | `"decay"` | `"decay"|"snap"|"spring-origin"` | ... |
+| xBounds | `[-Infinity, Infinity]` | `Array<Number>` | ... |
+| yBounds | `[-Infinity, Infinity]` | `Array<Number>` | ... |
+| snapSpacingX | `null` | `Number` | ... |
+| snapSpacingY | `null` | `Number` | ... |
+| overshootSpringConfig | `{ friction: 7, tension: 40 }` | `Object` | ... |
+| momentumDecayConfig | `{ deceleration: 0.993 }` | `Object` | ... |
+| overshootSpringConfig | `{ friction: 7, tension: 40 }` | `Object` | ... |
+| directionLockDistance | `10` | `Number` | ... |
+| overshootReductionFactor | `3` | `Number` | ... |
 
 
 ### Events
