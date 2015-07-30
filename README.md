@@ -19,6 +19,8 @@ $ npm install --save react-native-pan-controller
 ```
 
 
+
+
 ## API (props)
 
 ### Configuration
@@ -44,7 +46,6 @@ $ npm install --save react-native-pan-controller
 | directionLockDistance | `10` | `Number` | ... |
 | overshootReductionFactor | `3` | `Number` | ... |
 
-
 ### Events
 
 | Prop | Parameters | Description |
@@ -56,7 +57,32 @@ $ npm install --save react-native-pan-controller
 | onRelease | NO | ... |
 
 
+
+
+
 ## Examples
+
+There is an example project where you can run and inspect all of the below
+examples if you want.  In order to do so, you must first do the following:
+
+```bash
+$ cd examples
+$ npm install
+```
+
+### ScrollView
+
+### CoverFlow
+
+### PageScroller
+
+### PullToRefresh
+
+### Chat Heads
+
+### Window Shade
+
+
 
 
 ## Contributing
@@ -68,6 +94,10 @@ and add an example.
 
 If it is not easily implemented using the `PanController`, but seems like a
 strong use-case, I may extend the implementation to handle it more easily.
+
+
+
+
 
 ## License
 
