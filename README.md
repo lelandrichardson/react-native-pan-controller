@@ -79,9 +79,13 @@ $ npm install
 
 ### CoverFlow
 
+![](http://i.giphy.com/xTiTnh9zUTwf3oiHRK.gif)
+
 ### PageScroller
 
 ### PullToRefresh
+
+![](http://i.giphy.com/xTiTnduykRpC513w4M.gif)
 
 ### Chat Heads
 
