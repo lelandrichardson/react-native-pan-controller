@@ -2,7 +2,7 @@ var React = require('react-native');
 var {
   Image
 } = React;
-var CoverFlow = require('../lib/CoverFlow');
+var { CoverFlow } = require('react-native-pan-controller');
 
 var CoverFlowExample = React.createClass({
   getInitialState() {
@@ -17,13 +17,13 @@ var CoverFlowExample = React.createClass({
         require('image!6-nyt1'),
         require('image!7-pages1'),
         require('image!8-vine1'),
-      ]
+      ],
     };
   },
   render() {
     return (
       <CoverFlow>
-        {this.state.images.map((src, i) => <Image key={key} src={src} />)}
+        {this.state.images.map((src, i) => <Image key={i} source={src} />)}
       </CoverFlow>
     );
   }

@@ -1,9 +1,11 @@
 var React = require('react-native');
 var {
-  Image
+  Image,
+  StyleSheet,
+  Dimensions,
 } = React;
-var PageScroller = require('../lib/PageScroller');
-
+var { PageScroller } = require('react-native-pan-controller');
+var { width, height } = Dimensions.get('window');
 var PageScrollerExample = React.createClass({
   getInitialState() {
     return {
@@ -21,16 +23,28 @@ var PageScrollerExample = React.createClass({
     };
   },
   onRemove(i) {
-    IMAGES.splice(i,1);
-    this.forceUpdate();
+    this.setState({
+      images: this.state.images.slice(i, 1)
+    });
   },
   render() {
     return (
       <PageScroller onRemove={this.onRemove}>
-        {this.state.images.map((src, i) => <Image key={key} src={src} />)}
+        {this.state.images.map((src, i) => <Image key={i} style={styles.image} source={src} />)}
       </PageScroller>
     );
   }
 });
+
+var styles = StyleSheet.create({
+  image: {
+    // position: 'absolute',
+    // top: (width - 200) / 2,
+    // left: (height - 200) / 2,
+    width: 240,
+    height: 400,
+    resizeMode: 'cover'
+  }
+})
 
 module.exports = PageScrollerExample;
