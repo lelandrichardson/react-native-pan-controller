@@ -47,7 +47,7 @@ $ npm install --save react-native-pan-controller
 | :------------ |:---------------:| :---------------:| :-----|
 | overshootSpringConfig | `{ friction: 7, tension: 40 }` | `Object` | ... |
 | momentumDecayConfig | `{ deceleration: 0.993 }` | `Object` | ... |
-| overshootSpringConfig | `{ friction: 7, tension: 40 }` | `Object` | ... |
+| springOriginConfig | `{ friction: 7, tension: 40 }` | `Object` | ... |
 | directionLockDistance | `10` | `Number` | ... |
 | overshootReductionFactor | `3` | `Number` | ... |
 
