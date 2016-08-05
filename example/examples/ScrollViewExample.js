@@ -1,25 +1,40 @@
-var React = require('react-native');
-var {
-  View,
-  StyleSheet,
+// ----------------------------------------------------------------------------
+// Libraries
+// ----------------------------------------------------------------------------
+import React, { Component } from 'react';
+import {
   Animated,
+  StyleSheet,
   Text,
-} = React;
-var { ScrollView } = require('react-native-pan-controller');
-var views = Array(200).join(".").split("");
+  View,
+} from 'react-native';
 
-var ScrollViewExample = React.createClass({
-  getInitialState() {
-    return {
+// ----------------------------------------------------------------------------
+// Misc
+// ----------------------------------------------------------------------------
+const views = Array(200).join(".").split("");
+
+// ----------------------------------------------------------------------------
+// Components
+// ----------------------------------------------------------------------------
+import { ScrollView } from 'react-native-pan-controller';
+
+class ScrollViewExample extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
       scroll: new Animated.Value(0),
       text: "0",
     };
-  },
+  }
+
   componentDidMount() {
     this.state.scroll.addListener(({ value}) => {
       this.setState({ text: value });
     });
-  },
+  }
+
   render() {
     return (
       <ScrollView scroll={this.state.scroll}>
@@ -31,14 +46,17 @@ var ScrollViewExample = React.createClass({
       </ScrollView>
     );
   }
-});
+}
 
-var styles = StyleSheet.create({
+// ----------------------------------------------------------------------------
+// Styles
+// ----------------------------------------------------------------------------
+const styles = StyleSheet.create({
   view: {
     height: 40,
     borderWidth: 1,
     borderColor: '#ccc',
   }
-})
+});
 
-module.exports = ScrollViewExample;
+export default ScrollViewExample;

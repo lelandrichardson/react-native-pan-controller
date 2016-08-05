@@ -1,14 +1,31 @@
-var React = require('react-native');
-var {
-  Image,
-  StyleSheet,
+// ----------------------------------------------------------------------------
+// Libraries
+// ----------------------------------------------------------------------------
+import React, { Component } from 'react';
+import {
   Dimensions,
-} = React;
-var { PageScroller } = require('react-native-pan-controller');
-var { width, height } = Dimensions.get('window');
-var PageScrollerExample = React.createClass({
-  getInitialState() {
-    return {
+  StyleSheet,
+  Image,
+} from 'react-native';
+
+// ----------------------------------------------------------------------------
+// Misc
+// ----------------------------------------------------------------------------
+const { width, height } = Dimensions.get('window');
+
+// ----------------------------------------------------------------------------
+// Components
+// ----------------------------------------------------------------------------
+import { PageScroller } from 'react-native-pan-controller';
+
+class PageScrollerExample extends Component {
+  constructor(props) {
+    super(props);
+
+    // Bindings
+    this.onRemove = this.onRemove.bind(this);
+
+    this.state = {
       images: [
         require('image!0-cnn1'),
         require('image!1-facebook1'),
@@ -21,12 +38,14 @@ var PageScrollerExample = React.createClass({
         require('image!8-vine1'),
       ]
     };
-  },
+  }
+
   onRemove(i) {
     this.setState({
       images: this.state.images.slice(i, 1)
     });
-  },
+  }
+
   render() {
     return (
       <PageScroller onRemove={this.onRemove}>
@@ -34,9 +53,12 @@ var PageScrollerExample = React.createClass({
       </PageScroller>
     );
   }
-});
+}
 
-var styles = StyleSheet.create({
+// ----------------------------------------------------------------------------
+// Styles
+// ----------------------------------------------------------------------------
+const styles = StyleSheet.create({
   image: {
     // position: 'absolute',
     // top: (width - 200) / 2,
@@ -45,6 +67,6 @@ var styles = StyleSheet.create({
     height: 400,
     resizeMode: 'cover'
   }
-})
+});
 
-module.exports = PageScrollerExample;
+export default PageScrollerExample;
