@@ -39,4 +39,4 @@ class CoverFlowExample extends Component {
   }
 }
 
-export default CoverFlowExample;
+module.exports = CoverFlowExample;
