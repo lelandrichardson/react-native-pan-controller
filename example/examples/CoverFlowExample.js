@@ -1,12 +1,21 @@
-var React = require('react-native');
-var {
-  Image
-} = React;
-var { CoverFlow } = require('react-native-pan-controller');
+// ----------------------------------------------------------------------------
+// Libraries
+// ----------------------------------------------------------------------------
+import React, { Component } from 'react';
+import {
+  Image,
+} from 'react-native';
 
-var CoverFlowExample = React.createClass({
-  getInitialState() {
-    return {
+// ----------------------------------------------------------------------------
+// Components
+// ----------------------------------------------------------------------------
+import { CoverFlow } from 'react-native-pan-controller';
+
+class CoverFlowExample extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
       images: [
         require('image!0-cnn1'),
         require('image!1-facebook1'),
@@ -19,7 +28,8 @@ var CoverFlowExample = React.createClass({
         require('image!8-vine1'),
       ],
     };
-  },
+  }
+
   render() {
     return (
       <CoverFlow>
@@ -27,6 +37,6 @@ var CoverFlowExample = React.createClass({
       </CoverFlow>
     );
   }
-});
+}
 
 module.exports = CoverFlowExample;

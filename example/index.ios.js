@@ -4,24 +4,28 @@
  */
 'use strict';
 
-var React = require('react-native');
-var {
+// ----------------------------------------------------------------------------
+// Libraries
+// ----------------------------------------------------------------------------
+import React from 'react';
+import {
   AppRegistry,
   StyleSheet,
   Text,
   View,
-} = React;
+} from 'react-native';
 
-var CoverFlowExample = require('./examples/CoverFlowExample');
-var PageScrollerExample = require('./examples/PageScrollerExample');
-var ScrollViewExample = require('./examples/ScrollViewExample');
+// ----------------------------------------------------------------------------
+// Components
+// ----------------------------------------------------------------------------
+import CoverFlowExample from './examples/CoverFlowExample';
+import PageScrollerExample from './examples/PageScrollerExample';
+import ScrollViewExample from './examples/ScrollViewExample';
 
-var example = React.createClass({
-  render: function() {
-    return <ScrollViewExample />
-    // return <CoverFlowExample />
-    // return <PageScrollerExample />
-  }
-});
+function Example() {
+  // return <ScrollViewExample />;
+  return <CoverFlowExample />;
+  // return <PageScrollerExample />;
+}
 
-AppRegistry.registerComponent('example', () => example);
+AppRegistry.registerComponent('example', () => Example);
